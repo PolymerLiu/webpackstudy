@@ -1,10 +1,4 @@
-VSC Gist token   bd1b5b95763a8335763815c24b5c76a17cd0d160
-
-GitHub Token: 35e23d032d90d617aea0e0f2b45ace9c865bc256
-GitHub Gist: 90dbfe5e4fafe8bcd4566f2760f78510
-GitHub Gist Type: Secret
-
-
+#第一章学习笔记
 npm info webpack  （查看webpack的一些信息，比如说版本号）
 
 npx webpack index.js  在当前工程(node_modules文件夹下)寻找webpack并对index.js文件进行打包
@@ -23,3 +17,5 @@ webpack 打包文件的三种方式
 webpack index.js  （全局安装webpack）
 npx webpack index.js (局部安装webpack)
 npm run bundle  -> webpack (通过脚本执行webpack命令)
+
+# 第二章学习笔记
