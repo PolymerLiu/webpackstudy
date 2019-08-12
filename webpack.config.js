@@ -25,7 +25,15 @@ const config = {
             // style-loader 负责将生成的css添加到对应的标签上
             use: [
                 'style-loader',
-                'css-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                        // 在less文件里边引入其他less文件，同样需要经过下方的俩各loader处理
+                        // loader是从下往上执行的
+                        importLoaders: 2,
+                        modules: true
+                    }
+                },
                 'less-loader',
                 'postcss-loader',
 
