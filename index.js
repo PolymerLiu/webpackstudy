@@ -4,9 +4,12 @@ import Content from './src/content'
 
 import avatar from './src/avatar.jpg'
 
+import './src/index.less'
+
 console.log('============',avatar)
 let img = new Image()
 img.src = avatar
+img.classList.add('avatar')
 const root = document.getElementById('root')
 root.append(img)
 

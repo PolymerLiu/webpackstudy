@@ -18,7 +18,20 @@ const config = {
                     limit: 20480
                 }
             }
-        }]
+        },
+        {
+            test: /\.less$/,
+            // css-loader负责处理各css文件间的关系（比如在一个css文件中import另外一个css文件）,并将这些文件合并成一段css
+            // style-loader 负责将生成的css添加到对应的标签上
+            use: [
+                'style-loader',
+                'css-loader',
+                'less-loader',
+                'postcss-loader',
+
+            ]
+        }
+    ]
     },
     output:{
         filename:'bundle.js',
