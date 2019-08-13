@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     mode:'development',
-    entry:'./index.js',
+    entry:'./src/index.js',
     module:{
         rules:[{
             test: /\.(jpg|png|gif)$/,

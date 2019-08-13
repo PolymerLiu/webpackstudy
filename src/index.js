@@ -1,12 +1,12 @@
-import Header from './src/header'
-import SideBar from './src/sidebar'
-import Content from './src/content'
-import Avatar from './src/createAvatar'
+import Header from './header'
+import SideBar from './sidebar'
+import Content from './content'
+import Avatar from './createAvatar'
 
-import avatar from './src/avatar.jpg'
+import avatar from './avatar.jpg'
 
 // 在index文件引入该文件，相当于该样式是全局的
-import style from './src/index.less'
+import style from './index.less'
 
 Avatar()
 
