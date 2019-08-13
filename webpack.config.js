@@ -3,11 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     mode:'development',
-    // entry:'./src/index.js',
-    entry:{
-        main: './src/index.js',
-        sub: './src/index.js',
-    },
+    // inline表示map文件打包进bundle文件
+    // cheap表示只显示错误代码的行数
+    // module表示对依赖包也做了相关映射
+    // eval是最快的一种方式，无map文件
+    devtool: 'cheap-module-eval-source-map',
+    // 生产环境建议配置成cheap-module-eval-source-map
+    entry:'./src/index.js',
+    // entry:{
+    //     main: './src/index.js',
+    //     sub: './src/index.js',
+    // },
     module:{
         rules:[{
             test: /\.(jpg|png|gif)$/,
@@ -49,7 +55,7 @@ const config = {
     output:{
         filename:'[name].js',
         // 后台用index.html,静态资源放到CDN，此处可配置CDN地址，会在打包好的文件前边加上下方地址
-        publicPath: 'https://www.baidu.com',
+        // publicPath: 'https://www.baidu.com',
         path:path.resolve(__dirname,'dist')
     },
     plugins: [
