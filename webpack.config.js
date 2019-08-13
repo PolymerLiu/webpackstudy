@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     mode:'development',
-    entry:'./src/index.js',
+    // entry:'./src/index.js',
+    entry:{
+        main: './src/index.js',
+        sub: './src/index.js',
+    },
     module:{
         rules:[{
             test: /\.(jpg|png|gif)$/,
@@ -43,7 +47,7 @@ const config = {
     ]
     },
     output:{
-        filename:'bundle.js',
+        filename:'[name].js',
         path:path.resolve(__dirname,'dist')
     },
     plugins: [
