@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": " npm run clear && webpack",
-    "clear": "rimraf dist"
+    "clear": "rimraf dist",
+    "start": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
     "style-loader": "^1.0.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
   }
 }

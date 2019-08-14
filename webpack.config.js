@@ -14,6 +14,14 @@ const config = {
     //     main: './src/index.js',
     //     sub: './src/index.js',
     // },
+    devServer:{
+        contentBase: './dist',
+        open: true,
+        // mock 代理地址
+        proxy: {
+            '/api': 'https://www.baidu.com'
+        }
+    },
     module:{
         rules:[{
             test: /\.(jpg|png|gif)$/,
