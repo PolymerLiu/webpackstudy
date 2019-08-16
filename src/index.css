@@ -1,8 +1,0 @@
-.avatar{
-    width: 150px;
-    height: 150px;
-    transform: translate(100px,100px)
-}
-div:nth-of-type(odd){
-background: pink
-}
