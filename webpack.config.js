@@ -63,6 +63,14 @@ const config = {
         {
             test: /\.css$/,
             use: ['style-loader','css-loader']
+        },
+        {
+            test: /\.js$/,
+            exclude: /node_module/,
+            loader: 'babel-loader',
+            options: {
+                presets: ["@babel/preset-env"]
+            }
         }
     ]
     },
