@@ -69,7 +69,16 @@ const config = {
             exclude: /node_module/,
             loader: 'babel-loader',
             options: {
-                presets: ["@babel/preset-env"]
+                presets: [["@babel/preset-env",{
+                    // 兼容性测试，根据对应的浏览器决定是否使用polyfill转换代码
+                    targets: {
+                        edge: "17",
+                        firefox: "60",
+                        chrome: "17",
+                        safari: "11.1",
+                      },
+                    useBuiltIns: 'usage'
+                }]]
             }
         }
     ]
