@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -20,7 +21,9 @@ const config = {
         // mock 代理地址
         proxy: {
             '/api': 'https://www.baidu.com'
-        }
+        },
+        hot: true,
+        hotOnly: true
     },
     module:{
         rules:[{
@@ -55,8 +58,11 @@ const config = {
                 },
                 'less-loader',
                 'postcss-loader',
-
             ]
+        },
+        {
+            test: /\.css$/,
+            use: ['style-loader','css-loader']
         }
     ]
     },
@@ -72,6 +78,7 @@ const config = {
         title: 'Webpack Study',
         template: './src/template.html'
         }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
 

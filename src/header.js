@@ -1,6 +1,11 @@
 export default function Header () {
-    var dom = document.getElementById('root')
-    var content = document.createElement('div')
-    content.innerText = 'Header'
-    dom.append(content)
+    var btn = document.createElement('button')
+    btn.innerText = '新增'
+    document.body.append(btn)
+
+    btn.onclick = function(){
+        var div = document.createElement('div')
+        div.innerText = 'item'
+        document.body.append(div)
+    }
 }
