@@ -1,6 +1,6 @@
 export default function SideBar () {
-    var dom = document.getElementById('root')
     var content = document.createElement('div')
+    content.setAttribute('id','number')
     content.innerText = 'SideBar'
-    dom.append(content)
+    document.body.append(content)
 }

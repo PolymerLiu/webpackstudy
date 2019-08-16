@@ -18,6 +18,14 @@ console.log('================',);
 
 
 
-new Header()
-// new SideBar()
+Header()
+SideBar()
 // new Content()
+
+if(module.hot){
+    // 当sidebar.js文件发生变化时，执行回调
+    module.hot.accept('./sidebar',() => {
+        document.body.removeChild(document.getElementById('number'))
+        SideBar()
+    })
+}
