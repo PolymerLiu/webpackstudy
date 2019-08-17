@@ -5,9 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": " npm run clear && webpack",
+    "build": " npm run clear && webpack --config webpack.config.prd.js",
     "clear": "rimraf dist",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --config webpack.config.dev.js",
     "server": "node server.js"
   },
   "keywords": [],
@@ -34,6 +34,7 @@
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-middleware": "^3.7.0",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
   }
 }
