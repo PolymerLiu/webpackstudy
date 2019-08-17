@@ -66,6 +66,11 @@ const config = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   output:{
       filename:'[name].js',
       // 后台用index.html,静态资源放到CDN，此处可配置CDN地址，会在打包好的文件前边加上下方地址
