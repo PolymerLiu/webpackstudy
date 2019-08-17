@@ -3,12 +3,14 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
-    mode:'development',
+    // mode:'development',
+    mode:'production',
     // inline表示map文件打包进bundle文件
     // cheap表示只显示错误代码的行数
     // module表示对依赖包也做了相关映射
     // eval是最快的一种方式，无map文件
-    devtool: 'cheap-module-eval-source-map',
+    // devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-source-map',
     // 生产环境建议配置成cheap-module-eval-source-map
     entry:'./src/index.js',
     // entry:{
@@ -91,9 +93,9 @@ const config = {
         path:path.resolve(__dirname,'dist')
     },
     // 只有在development环境下才需要有下方配置
-    optimization: {
-        usedExports: true
-    },
+    // optimization: {
+    //     usedExports: true
+    // },
     plugins: [
         new HtmlWebpackPlugin({
         title: 'Webpack Study',
