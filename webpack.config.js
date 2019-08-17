@@ -22,8 +22,8 @@ const config = {
         proxy: {
             '/api': 'https://www.baidu.com'
         },
-        hot: true,
-        hotOnly: true
+        // hot: true,
+        // hotOnly: true
     },
     module:{
         rules:[{
@@ -89,6 +89,10 @@ const config = {
         // publicPath: 'https://www.baidu.com',
         publicPath: '/',
         path:path.resolve(__dirname,'dist')
+    },
+    // 只有在development环境下才需要有下方配置
+    optimization: {
+        usedExports: true
     },
     plugins: [
         new HtmlWebpackPlugin({
