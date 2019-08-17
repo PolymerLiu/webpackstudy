@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// 打包分析插件
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const config = {
   entry:'./src/index.js',
@@ -83,6 +85,7 @@ const config = {
     title: 'Webpack Study',
     template: './src/template.html'
     }),
+    new BundleAnalyzerPlugin()
   ]
 }
 module.exports = config
