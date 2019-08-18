@@ -1,3 +1,5 @@
-import _ from 'lodash'
-
-console.log('================',_.join(['a','b','c'],'88888888'));
+document.addEventListener('click',() => {
+  import('./click').then(({default: func}) => {
+    func()
+  })
+})

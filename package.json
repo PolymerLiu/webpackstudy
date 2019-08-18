@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "build": " npm run clear && webpack --config webpack.config.prd.js",
-    "clear": "rimraf dist",
+    "dev": " npm run clear && webpack --config webpack.config.dev.js",
     "start": "webpack-dev-server --config webpack.config.dev.js",
+    "clear": "rimraf dist",
     "server": "node server.js"
   },
   "keywords": [],
